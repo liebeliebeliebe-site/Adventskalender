@@ -16,12 +16,6 @@ html, body {
   background: linear-gradient(#123, #111);
 }
 
-body {
-  width: 100vw;
-  height: 100vh;
-}
-
-
 #calendar {
   position: relative;
 
