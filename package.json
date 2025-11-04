@@ -1,0 +1,23 @@
+{
+  "name": "adventskalender",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/liebeliebeliebe-site/Adventskalender#readme",
+  "bugs": {
+    "url": "https://github.com/liebeliebeliebe-site/Adventskalender/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/liebeliebeliebe-site/Adventskalender.git"
+  },
+  "license": "MIT",
+  "author": "",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "devDependencies": {
+    "@h0rn0chse/socket-server": "^1.2.0"
+  }
+}
