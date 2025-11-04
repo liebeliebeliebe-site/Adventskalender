@@ -13,6 +13,7 @@ html, body {
 }
 
 html, body {
+  background-color: #111;
   background: linear-gradient(#123, #111);
 }
 
