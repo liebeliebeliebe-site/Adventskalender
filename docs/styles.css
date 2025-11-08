@@ -14,9 +14,9 @@ html, body {
 
 html {
   width: 100vw;
-  min-height: 100vh;
+  height: 100vh;
   /* Use min-height with vh to ensure background covers entire viewport including safe areas */
-  min-height: 100dvh;
+  /* min-height: 100dvh; */
 
   background-color: #111111;
 }
