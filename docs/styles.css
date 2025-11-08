@@ -18,7 +18,7 @@ html {
   /* Use min-height with vh to ensure background covers entire viewport including safe areas */
   /* min-height: 100dvh; */
 
-  background-color: #111111;
+  /* background-color: #111111; */
 }
 
 body {
@@ -31,7 +31,7 @@ body {
   padding-left: env(safe-area-inset-left);
   padding-right: env(safe-area-inset-right);
   
-  background: linear-gradient(#112233, #111111);
+  /* background: linear-gradient(#112233, #111111); */
 }
 
 #calendar {
