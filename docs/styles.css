@@ -4,6 +4,8 @@
 html, body {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
 
   font-family: 'Segoe Print', 'Bradley Hand', Chilanka, TSCu_Comic, casual, cursive;
 
