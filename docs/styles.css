@@ -7,6 +7,9 @@ html, body {
   overflow: hidden;
 
   font-family: 'Segoe Print', 'Bradley Hand', Chilanka, TSCu_Comic, casual, cursive;
+
+  background-color: #111111;
+  background: linear-gradient(#112233, #111111);
 }
 
 html {
