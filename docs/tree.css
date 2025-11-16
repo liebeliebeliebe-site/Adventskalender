@@ -24,6 +24,33 @@
   }
 }
 
+@media (max-width: 399px) and (orientation: portrait) {
+  #tree {
+    margin-top: 1rem;
+
+    width: 300px;
+    height: 522.59px;
+  }
+}
+
+@media (max-height: 399px) and (orientation: landscape) {
+  #tree {
+    margin-top: 0;
+
+    width: 172.22px;
+    height: 300px;
+  }
+}
+
+@media (min-height: 919px) {
+  #tree {
+    margin-top: 2rem;
+
+    width: 516.66px;
+    height: 900px;
+  }
+}
+
 .ball {
   position: absolute;
 
