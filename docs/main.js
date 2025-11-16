@@ -1,3 +1,4 @@
+import { openModal } from "./Modal.js";
 import { sparklify } from "./Sparkle.js";
 
 const snowflake = `
@@ -130,47 +131,6 @@ function openDay(day, skipAnimation) {
   }
 
   openModal(dayElement || document.body, skipAnimation);
-}
-
-function openModal(target, skipAnimation) {
-  const modal = document.getElementById("modal");
-
-  if (skipAnimation) {
-    modal.showModal();
-    return;
-  }
-
-  const width = target.offsetWidth;
-  const height = width; // assume square, image is loaded lazily
-  const posX = target.getBoundingClientRect().left + width / 2;
-  const posY = target.getBoundingClientRect().top + height / 2;
-
-  const div = document.createElement("div");
-  div.classList.add("snowflake");
-  div.style.left = `${posX}px`;
-  div.style.top = `${posY}px`;
-
-  const divInner = document.createElement("div");
-  divInner.classList.add("snowflake-inner");
-  divInner.innerHTML = snowflake;
-
-  const div2 = document.createElement("div");
-  div2.style.position = "fixed";
-  div2.style.left = "0px";
-  div2.style.top = "0px";
-  div2.style.right = "0px";
-  div2.style.bottom = "0px";
-  div2.classList.add("snowflake-background");
-
-  div.appendChild(divInner);
-  document.body.appendChild(div);
-  document.body.appendChild(div2);
-
-  setTimeout(() => {
-    modal.showModal();
-    div.remove();
-    div2.remove();
-  }, 1800);
 }
 
 function saveData() {
