@@ -34,9 +34,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  animation: sparkle-size var(--animation-length) ease-in-out forwards infinite;
+  animation: sparkle-size var(--animation-length) ease-in-out forwards;
 }
 
 .innerSparkle {
-  animation: sparkle-rotate var(--animation-length) linear forwards infinite;
+  animation: sparkle-rotate var(--animation-length) linear forwards;
 }

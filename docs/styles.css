@@ -96,3 +96,72 @@ body {
   /* background-color: peru; */
   /* filter: saturate(-3); */
 }
+
+
+@keyframes snowflake-size {
+  0% {
+    transform: scale(0) rotate(0deg);
+  }
+  70% {
+    transform: scale(0.1) rotate(45deg);
+  }
+  100% {
+    transform: scale(1) rotate(360deg);
+  }
+}
+
+.snowflake {
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+.snowflake .snowflake-inner {
+  width: 300vw;
+  animation: snowflake-size 1800ms ease-in forwards;
+}
+
+.snowflake svg{
+  width: 100%;
+  height: auto;
+}
+
+@keyframes snowflake-background {
+  0% {
+    background-color: transparent;
+  }
+  70% {
+    background-color: transparent;
+  }
+  100% {
+    background-color: white;
+  }
+}
+
+.snowflake-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+
+  animation: snowflake-background 1800ms ease-in forwards;
+}
+
+#modal {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  max-height: 100%;
+  max-width: 100%;
+  border: none;
+}
+
+#modal > .modal-inner {
+  display: flex;
+  flex-direction: column;
+}
+
+#close-btn {
+  align-self: flex-end;
+}
+
