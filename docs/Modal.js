@@ -1,3 +1,4 @@
+// Generated on https://www.misha.studio/snowflaker/
 const snowflake = `
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 60 70" width="60" height="70">
 	<g fill="none" fill-rule="nonzero" stroke="#ffffff" stroke-width="3.33333" stroke-linecap="round" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
@@ -16,7 +17,6 @@ const snowflake = `
           24.8754,32.0413
           23.1068,25.4409
 
-          
           25.16822,24.25077
           30,29.0826
           34.83178,24.25077

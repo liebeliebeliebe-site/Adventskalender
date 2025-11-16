@@ -79,6 +79,10 @@
   filter: saturate(0);
 }
 
+.ball.opened .text:not(.today .text) {
+  color: white;
+}
+
 #ball1 {
   width: 7.1%;
   top: 61.7%;
