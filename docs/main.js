@@ -44,7 +44,7 @@ const data = fetchData();
 function openDay(day, skipAnimation) {
   if (!canOpenDay(day)) {
     location.hash = "";
-    alert("You cannot open this day yet!");
+    alert("Dieser Tag lässt sich noch nicht öffnen!");
     return;
   }
 
