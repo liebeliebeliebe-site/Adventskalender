@@ -1,14 +1,27 @@
 #tree {
+  align-self: flex-start;
+  margin-top: 4rem;
+
   /* original dimensions 965/1681 */
   position: relative;
   /* width: 287px;
   height: 500px; */
-  width: 428px;
-  height: 745px;
+  width: 400px;
+  height: 696.788px;
+
   background-image: url('../assets/tree.png');
   background-repeat: no-repeat;
   background-size: contain;
   pointer-events: none;
+}
+
+@media (orientation: landscape) {
+  #tree {
+    margin-top: 0;
+
+    width: 229.63px;
+    height: 400px;
+  }
 }
 
 .ball {
