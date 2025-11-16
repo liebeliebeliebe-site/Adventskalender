@@ -50,7 +50,8 @@ function openDay(day, skipAnimation) {
 
   const dayElement = document.querySelector(`.day[data-day="${day}"]`);
 
-  if (!data.openedDays.includes(day)) {
+  const firstTime = !data.openedDays.includes(day);
+  if (firstTime) {
     data.openedDays.push(day);
     saveData();
     dayElement.classList.add("opened");
@@ -58,6 +59,8 @@ function openDay(day, skipAnimation) {
 
   setModalTitle(`${day}. Dezember`);
   openModal(dayElement || document.body, skipAnimation);
+
+  umami?.track("open-day", { day, firstTime });
 }
 
 function saveData() {
