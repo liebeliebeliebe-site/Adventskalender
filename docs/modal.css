@@ -1,3 +1,22 @@
+#modal {
+  width: 100%;
+  height: 100%;
+  padding: 3rem;
+  margin: 0;
+  max-height: 100%;
+  max-width: 100%;
+  border: none;
+}
+
+#modal > .modal-inner {
+  display: flex;
+  flex-direction: column;
+}
+
+#close-btn {
+  align-self: flex-end;
+}
+
 @keyframes snowflake-size {
   0% {
     transform: scale(0) rotate(0deg);
@@ -45,22 +64,4 @@
   right: 0;
 
   animation: snowflake-background 1800ms ease-in forwards;
-}
-
-#modal {
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  max-height: 100%;
-  max-width: 100%;
-  border: none;
-}
-
-#modal > .modal-inner {
-  display: flex;
-  flex-direction: column;
-}
-
-#close-btn {
-  align-self: flex-end;
 }
