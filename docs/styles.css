@@ -1,5 +1,5 @@
 @import './background-snow.css';
-
+@import './sparkle.css';
 
 html, body {
   margin: 0;
@@ -94,4 +94,5 @@ body {
 
 .day.opened {
   /* background-color: peru; */
+  /* filter: saturate(-3); */
 }

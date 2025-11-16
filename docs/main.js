@@ -1,10 +1,4 @@
-import { emojiCursor } from "./libs/emojiCursor.js";
-
-new emojiCursor({ emoji: ["❄"] });
-
-// document.getElementById("calendar").addEventListener("click", () => {
-//   alert("Hoho");
-// });
+import { sparklify } from "./Sparkle.js";
 
 const closeButton = document.querySelector("#close-btn");
 closeButton.addEventListener("click", () => {
@@ -25,6 +19,10 @@ document.querySelectorAll(".day").forEach((dayElement) => {
     const day = dayElement.getAttribute("data-day");
     location.hash = day;
   });
+
+  sparklify(dayElement, "1rem", undefined, 700);
+  sparklify(dayElement, "0.5rem", undefined, 400, 300);
+  sparklify(dayElement, "0.5rem", undefined, 500, 400);
 });
 
 function canOpenDay(day) {
