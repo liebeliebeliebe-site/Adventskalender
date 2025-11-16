@@ -60,7 +60,7 @@ function openDay(day, skipAnimation) {
   setModalTitle(`${day}. Dezember`);
   openModal(dayElement || document.body, skipAnimation);
 
-  umami?.track("open-day", { day, firstTime });
+  umami?.track(`open-day-${day}`, { firstTime });
 }
 
 function saveData() {
