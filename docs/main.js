@@ -93,10 +93,6 @@ document.querySelectorAll(".day").forEach((dayElement) => {
     const day = dayElement.getAttribute("data-day");
     location.hash = day;
   });
-
-  sparklify(dayElement, "1rem", undefined, 700);
-  sparklify(dayElement, "0.5rem", undefined, 400, 300);
-  sparklify(dayElement, "0.5rem", undefined, 500, 400);
 });
 
 function canOpenDay(day) {
@@ -118,7 +114,7 @@ function fetchData() {
 
 const data = fetchData();
 
-function openDay(day) {
+function openDay(day, skipAnimation) {
   if (!canOpenDay(day)) {
     location.hash = "";
     alert("You cannot open this day yet!");
@@ -133,10 +129,17 @@ function openDay(day) {
     dayElement.classList.add("opened");
   }
 
-  openModal(dayElement || document.body);
+  openModal(dayElement || document.body, skipAnimation);
 }
 
-function openModal(target) {
+function openModal(target, skipAnimation) {
+  const modal = document.getElementById("modal");
+
+  if (skipAnimation) {
+    modal.showModal();
+    return;
+  }
+
   const width = target.offsetWidth;
   const height = width; // assume square, image is loaded lazily
   const posX = target.getBoundingClientRect().left + width / 2;
@@ -163,8 +166,6 @@ function openModal(target) {
   document.body.appendChild(div);
   document.body.appendChild(div2);
 
-  const modal = document.getElementById("modal");
-
   setTimeout(() => {
     modal.showModal();
     div.remove();
@@ -182,10 +183,19 @@ document.querySelectorAll(".day").forEach((dayElement) => {
   if (data.openedDays.includes(day)) {
     dayElement.classList.add("opened");
   }
+
+  const today = new Date().getDate();
+  if (day === today.toString()) {
+    dayElement.classList.add("today");
+
+    sparklify(dayElement, "1rem", undefined, 700);
+    sparklify(dayElement, "0.5rem", undefined, 400, 300);
+    sparklify(dayElement, "0.5rem", undefined, 500, 400);
+  }
 });
 
 // open day if hash is present
 if (location.hash) {
   const day = location.hash.substring(1);
-  openDay(day);
+  openDay(day, true);
 }
