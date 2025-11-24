@@ -78,6 +78,12 @@ export function setModalTitle(title) {
   titleElement.innerText = title;
 }
 
+export function setModalImage(src) {
+  const imageElement = document.getElementById("modal-image");
+  imageElement.src = "";
+  imageElement.src = src;
+}
+
 export function openModal(target, skipAnimation) {
   if (skipAnimation) {
     modal.showModal();

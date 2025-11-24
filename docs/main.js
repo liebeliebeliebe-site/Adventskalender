@@ -1,4 +1,4 @@
-import { openModal, setModalTitle } from "./Modal.js";
+import { openModal, setModalTitle, setModalImage } from "./Modal.js";
 import { sparklify } from "./Sparkle.js";
 
 const closeButton = document.querySelector("#close-btn");
@@ -58,6 +58,7 @@ function openDay(day, skipAnimation) {
   }
 
   setModalTitle(`${day}. Dezember`);
+  setModalImage(`../assets/days/day${day}.png`);
   openModal(dayElement || document.body, skipAnimation);
 
   umami?.track(`open-day-${day}`, { firstTime });
