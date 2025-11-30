@@ -94,8 +94,15 @@ document.querySelectorAll(".day").forEach((dayElement) => {
     dayElement.classList.add("opened");
   }
 
+  const lastDate = new Date("2025-12-24");
+  const startDate = new Date("2025-12-01");
+
   const today = new Date().getDate();
-  if (day === today.toString()) {
+  if (
+    day === today.toString() &&
+    new Date() >= startDate &&
+    new Date() <= lastDate
+  ) {
     dayElement.classList.add("today");
 
     sparklify(dayElement, "1rem", undefined, 700);
