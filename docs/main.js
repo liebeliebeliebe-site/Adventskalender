@@ -22,6 +22,10 @@ document.querySelectorAll(".day").forEach((dayElement) => {
   });
 });
 
+document.querySelector("#cat").addEventListener("click", () => {
+  shakeTree();
+});
+
 function canOpenDay(day) {
   const isDebug = location.search.includes("debug=true");
   if (isDebug) {
@@ -110,6 +114,21 @@ document.querySelectorAll(".day").forEach((dayElement) => {
     sparklify(dayElement, "0.5rem", undefined, 500, 400);
   }
 });
+
+function shakeTree() {
+  umami?.track("cat");
+  document.querySelectorAll(".ball").forEach((ball) => {
+    ball.classList.add("fall");
+  });
+
+  setTimeout(() => {
+    const img = document.createElement("img");
+    img.src = "../assets/miau.png";
+    img.classList.add("miau");
+    const parent = document.getElementById("tree");
+    parent.appendChild(img);
+  }, 500);
+}
 
 // open day if hash is present
 if (location.hash) {

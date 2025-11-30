@@ -231,3 +231,34 @@
   font-size: 1.3rem;
   top: 53%;
 }
+
+#cat {
+  position: absolute;
+
+  cursor: pointer;
+  pointer-events: auto;
+  border-radius: 50%;
+
+  width: 12%;
+  top: 87%;
+  left: 64%;
+  height: 6%;
+}
+
+@keyframes ball-fall {
+  100% {
+    top: 90%;
+  }
+}
+
+.ball.fall:not(#star) {
+  animation: ball-fall 500ms cubic-bezier(0.6, 0, 1, 1) forwards;
+  /* animation: ball-fall 500ms ease-in forwards; */
+}
+
+.miau {
+  top: 0;
+  left: 0;
+  width: 100%;
+  position: absolute;
+}
