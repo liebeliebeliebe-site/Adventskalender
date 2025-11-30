@@ -23,11 +23,30 @@ document.querySelectorAll(".day").forEach((dayElement) => {
 });
 
 function canOpenDay(day) {
+  const isDebug = location.search.includes("debug=true");
+  if (isDebug) {
+    return true;
+  }
+
+  const lastDate = new Date("2025-12-24");
+  if (new Date() >= lastDate) {
+    return true;
+  }
+  const startDate = new Date("2025-12-01");
+  if (new Date() <= startDate) {
+    return false;
+  }
+
   const today = new Date().getDate();
   return today >= day;
 }
 
 function fetchData() {
+  const isReset = location.search.includes("reset=true");
+  if (isReset) {
+    localStorage.removeItem("adventskalender2025");
+  }
+
   const sData = localStorage.getItem("adventskalender2025");
   const initialData = {
     openedDays: [],
