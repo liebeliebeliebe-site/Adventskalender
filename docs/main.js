@@ -98,7 +98,7 @@ document.querySelectorAll(".day").forEach((dayElement) => {
     dayElement.classList.add("opened");
   }
 
-  const lastDate = new Date("2025-12-24");
+  const lastDate = new Date("2025-12-25");
   const startDate = new Date("2025-12-01");
 
   const today = new Date().getDate();
