@@ -1,5 +1,5 @@
+import { SparkleAnimation } from "https://unpkg.com/@h0rn0chse/sparklify@1.1.0/dist/sparklify.min.js";
 import { openModal, setModalTitle, setModalImage } from "./Modal.js";
-import { sparklify } from "./Sparkle.js";
 
 const closeButton = document.querySelector("#close-btn");
 closeButton.addEventListener("click", () => {
@@ -101,6 +101,7 @@ document.querySelectorAll(".day").forEach((dayElement) => {
   const lastDate = new Date("2025-12-25");
   const startDate = new Date("2025-12-01");
 
+  // debugger;
   const today = new Date().getDate();
   if (
     day === today.toString() &&
@@ -109,9 +110,25 @@ document.querySelectorAll(".day").forEach((dayElement) => {
   ) {
     dayElement.classList.add("today");
 
-    sparklify(dayElement, "1rem", undefined, 700);
-    sparklify(dayElement, "0.5rem", undefined, 400, 300);
-    sparklify(dayElement, "0.5rem", undefined, 500, 400);
+    dayElement.classList.add("sparklify-target");
+    [
+      new SparkleAnimation({
+        target: dayElement,
+        size: "1rem",
+      }),
+      new SparkleAnimation({
+        target: dayElement,
+        size: "0.5rem",
+        animationLength: 400,
+        initialDelay: 300,
+      }),
+      new SparkleAnimation({
+        target: dayElement,
+        size: "0.5rem",
+        animationLength: 500,
+        initialDelay: 400,
+      }),
+    ].forEach((animation) => animation.start());
   }
 });
 

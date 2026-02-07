@@ -19,5 +19,8 @@
   },
   "devDependencies": {
     "@h0rn0chse/socket-server": "^1.2.0"
+  },
+  "dependencies": {
+    "@h0rn0chse/sparklify": "^1.1.0"
   }
 }
